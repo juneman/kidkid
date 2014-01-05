@@ -26,17 +26,6 @@ return array(
                 ),
             ),
             
-						'wizard' => array(
-                'type'    => 'segment',
-                'options' => array(
-                    'route'    => '/wizard',
-                    'defaults' => array(
-                        'controller' => 'User\Controller\User',
-                        'action'     => 'wizard',
-                    ),
-                ),
-            ),
-
 						'profile' => array(
                 'type'    => 'segment',
                 'options' => array(
@@ -47,19 +36,6 @@ return array(
                     ),
                 ),
             ),
-
-						'rsconfig' => array(
-                'type'    => 'segment',
-                'options' => array(
-                    'route'    => '/rsconfig',
-                    'defaults' => array(
-                        'controller' => 'User\Controller\User',
-                        'action'     => 'rsconfig',
-                    ),
-                ),
-            ),
-
-
         ),
     ),
 

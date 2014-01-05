@@ -7,39 +7,12 @@ use Zend\View\Model\ViewModel;
 use Zend\View\Model\JsonModel;
 use Zend\Authentication\AuthenticationService;
 
-use Words\Model\DictItem;
-use Words\Model\DictTable;
-
-use Words\Model\HFDictItem;
-use Words\Model\HFDictTable;
-
-use Words\Model\WordsItem;
-use Words\Model\WordsTable;
-
-use Article\Model\Article;
-use Article\Model\ArticleTable;
-
-use Rsarticle\Model\Rsarticle;
-use Rsarticle\Model\RsarticleTable;
-
-use Rsarticle\Model\ArticleStatics;
-use Rsarticle\Model\ArticleStaticsTable;
-
-use Rsarticle\Model\WordArticleMap;
-use Rsarticle\Model\WordArticleMapTable;
-
 use User\Model\UserProfile;
 use User\Model\UserProfileTable;
 
 class IndexController extends AbstractActionController
 {
-	protected $rsarticle_table;
-	protected $article_table;
-	protected $words_table;
-	protected $dict_table;
 	protected $profile_table;	
-	protected $statics_table;	
-	protected $wamap_table;
 
 	public function indexAction()
 	{
@@ -52,7 +25,7 @@ class IndexController extends AbstractActionController
 		}
 		else
 		{
-			return $this->redirect()->toRoute('account');
+//			return $this->redirect()->toRoute('account');
 		}
 
 		$profile = new UserProfile($this->getProfileTable()->getAdapter());
